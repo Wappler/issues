@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: A question or how do I…
+    url: https://community.wappler.io
+    about: Ask on the community forum, where the team and other Wappler users answer.
+  - name: An idea or a wish
+    url: https://community.wappler.io
+    about: Share it on the forum (Help › Share an idea in Wappler), so others can vote and add to it.
+  - name: A security problem
+    url: https://github.com/Wappler/issues/security/advisories/new
+    about: Report it privately, never as a public issue.

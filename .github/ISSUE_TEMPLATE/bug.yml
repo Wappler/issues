@@ -1,0 +1,107 @@
+name: Something does not work
+description: Wappler does something wrong, shows an error or closes. One problem per issue.
+labels: ["bug", "new"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time. A good report gets fixed fastest.
+
+        **Start in Wappler:** Help › Report a problem. It sends this session's log and a screenshot privately to the Wappler team (never to this page) and gives you a **report id**. Paste that id below.
+
+        **Never paste** a password, API key, token, connection string or customer data here. This page is public.
+
+        Questions and how-to go to the [community forum](https://community.wappler.io), where more people can answer.
+  - type: input
+    id: report_id
+    attributes:
+      label: Report id
+      description: From Help › Report a problem. Leave empty only if Wappler cannot start.
+      placeholder: e.g. 8f3c2a91
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you saw, in your own words. Copy an error message exactly.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to make it happen
+      description: The steps from opening Wappler, one per line, so we can do the same.
+      placeholder: |
+        1. Open a Node project with a MySQL database
+        2. In Design, select the navbar
+        3. Click + Add item
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: dropdown
+    id: product
+    attributes:
+      label: Wappler
+      options:
+        - Wappler 8
+        - Wappler 7
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Help › About Wappler.
+      placeholder: e.g. 8.0.0-beta.1
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Computer
+      options:
+        - Windows
+        - macOS (Apple silicon)
+        - macOS (Intel)
+        - Linux
+    validations:
+      required: true
+  - type: dropdown
+    id: project
+    attributes:
+      label: Project
+      description: The server model of the project it happened in, if any.
+      options:
+        - No project open
+        - Node
+        - PHP
+        - ASP.NET
+        - Static site
+        - Mobile app
+        - Other or not sure
+  - type: dropdown
+    id: how_often
+    attributes:
+      label: How often
+      options:
+        - Every time
+        - Sometimes
+        - Once so far
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else
+      description: A screenshot or short video helps. Check it shows no password or private data.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you send
+      options:
+        - label: I searched the open issues and this one is not there yet.
+          required: true
+        - label: This issue holds no password, key, token or private data.
+          required: true
